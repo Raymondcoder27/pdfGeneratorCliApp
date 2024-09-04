@@ -19,7 +19,7 @@ func newBill(name string) bill {
 }
 
 // format the bill
-func (b bill) format() string {
+func (b *bill) format() string {
 	fs := "Bill breakdown\n"
 	var total float64 = 0
 
@@ -28,19 +28,21 @@ func (b bill) format() string {
 		fs += fmt.Sprintf("%-25v ...%-25v\n", k+":", v)
 		total += v
 	}
+	//tip
+	fs += fmt.Sprintf("%-25v ...$%v\n", "tip:", b.tip)
 
 	//total
-	fs += fmt.Sprintf("%-25v ...$%0.2f\n", "total:", total)
+	fs += fmt.Sprintf("%-25v ...$%0.2f\n", "total:", total+b.tip)
 
 	return fs
 }
 
 // update tip
-func (b bill) updateTip(tip float64) {
+func (b *bill) updateTip(tip float64) {
 	b.tip = tip
 }
 
 // add name
-func (b bill) addItem(name string, price float64) {
+func (b *bill) addItem(name string, price float64) {
 	b.items[name] = price
 }
