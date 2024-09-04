@@ -33,6 +33,15 @@ func promptOptions(b bill) {
 
 	opt, _ := getInput("Choose option (a - add item, s - save bill, t - add tip): ", reader)
 	fmt.Println(opt)
+
+	switch opt {
+	case "a":
+		fmt.Println("you chose to add an item")
+	case "s":
+		fmt.Println("you chose to save the bill")
+	case "t":
+		fmt.Println("you chose to add a tip.")
+	}
 }
 
 func main() {
