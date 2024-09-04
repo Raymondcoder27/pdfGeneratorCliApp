@@ -1,0 +1,7 @@
+Bill breakdown
+Pie:                      ...45                       
+Pizza:                    ...34                       
+Rice:                     ...233                      
+posho:                    ...122                      
+tip:                      ...$111
+total:                    ...$545.00
