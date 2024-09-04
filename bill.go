@@ -54,5 +54,9 @@ func (b *bill) addItem(name string, price float64) {
 func (b *bill) saveFile() {
 	data := []byte(b.format())
 
-	os.WriteFile("bills/"+b.name+".txt", data, 0644)
+	err := os.WriteFile("bills/"+b.name+".txt", data, 0644)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("The bill was saved")
 }
