@@ -34,3 +34,11 @@ func (b bill) format() string {
 
 	return fs
 }
+
+// update tip
+func (b bill) updateTip(tip float64) {
+	b.tip = tip
+}
+
+//add name
+func (b bill) addName(
