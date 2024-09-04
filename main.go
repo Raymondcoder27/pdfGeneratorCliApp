@@ -38,5 +38,5 @@ func promptOptions(b bill) {
 func main() {
 	myBill := createBill()
 
-	fmt.Println(myBill.format())
+	promptOptions(myBill)
 }
