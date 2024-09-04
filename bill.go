@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type bill struct {
 	name  string
 	items map[string]float64
@@ -21,4 +23,8 @@ func format(b bill) string {
 	fs := "Bill breakdown\n"
 	var total float64 = 0
 
+	//list items
+	for k, v := range b.items {
+		fs := fmt.Sprint("%-25v ...%-25v", k+":", v)
+	}
 }
