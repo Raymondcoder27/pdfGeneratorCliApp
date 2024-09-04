@@ -6,11 +6,11 @@ type bill struct {
 	tip   float64
 }
 
-func newBill(n string) bill {
+func newBill(name string) bill {
 	b := bill{
-		name:  "",
+		name:  name,
 		items: map[string]float64{},
 		tip:   0,
 	}
-
+	return b
 }
