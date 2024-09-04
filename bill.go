@@ -40,5 +40,7 @@ func (b bill) updateTip(tip float64) {
 	b.tip = tip
 }
 
-//add name
-func (b bill) addName(
+// add name
+func (b bill) addItem(name string, price float64) {
+	b.items[name] = price
+}
