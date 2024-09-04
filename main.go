@@ -36,13 +36,13 @@ func promptOptions(b bill) {
 
 	switch opt {
 	case "a":
-		name, _ := getInput("Item name", reader)
-		price, _ := getInput("Item price", reader)
+		name, _ := getInput("Item name: ", reader)
+		price, _ := getInput("Item price: ", reader)
 		fmt.Println(name, price)
 	case "s":
 		fmt.Println("you chose to save the bill")
 	case "t":
-		tip, _ := getInput("Enter tip amount ($)", reader)
+		tip, _ := getInput("Enter tip amount ($): ", reader)
 		fmt.Println(tip)
 	default:
 		fmt.Println("that was not a valid option.")
